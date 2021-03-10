@@ -1,10 +1,14 @@
 import React from 'react';
+import "./TeamHeader.css"
 
-const TeamHeader = () => {
+const TeamHeader = (props) => {
+    const logo = props.logo
     return (
-        <div>
-            <h1>this is the header</h1>
-        </div>
+        <header className="team-header">
+            <div className="team-badge">
+                <img src={logo} alt={logo} />
+            </div>
+        </header>
     );
 };
 

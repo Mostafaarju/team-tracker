@@ -1,0 +1,12 @@
+.team-image img {
+    width: 300px;
+}
+.team-image {
+    text-align: right;
+}
+.team-info {
+    align-items: center;
+    background: cornflowerblue;
+    border-radius: 10px;
+    padding: 10px;
+}
