@@ -20,22 +20,25 @@ const TeamDetails = () => {
             .then(data => setTeam(data.data.teams[0]));
     }, [teamId])
 
-    const { strDescriptionEN, idTeam, strAlternate, strCountry, intFormedYear, strTeamBadge, strFacebook, strGender, strTwitter, strWebsite, strYoutube, strSport } = team;
+    const { strTeamFanart4, strDescriptionEN, idTeam, strAlternate, strCountry, intFormedYear, strTeamBadge, strFacebook, strGender, strTwitter, strWebsite, strYoutube, strSport } = team;
 
     const maleBanner = <img src="https://i.ibb.co/4R8p4z5/male.png" alt="male" />;
     const femaleBanner = <img src="https://i.ibb.co/TK8fhRC/female.png" alt="female" />;
 
-    const str = "how are you"
 
-    const strs = strDescriptionEN?.split(' ')
+    const description = strDescriptionEN?.split(" ")
+    const first100Paragraphs = description?.slice(0, 100).join(" ")
+    const second100Paragraphs = description?.slice(100, 200).join(" ")
+    const restParagraphs = description?.slice(200).join(" ")
+    console.log(restParagraphs);
 
-    console.log(strs);
+
 
     return (
         <div>
 
             <div className="team-header">
-                <TeamHeader logo={strTeamBadge} />
+                <TeamHeader banner={strTeamFanart4} logo={strTeamBadge} />
             </div>
             <div className="breadcrumb">
                 <span><Link to="/">Home</Link> {'>'} <Link to={"/league/" + idTeam}>Team</Link></span>
@@ -55,7 +58,9 @@ const TeamDetails = () => {
                     </Col>
                 </Row>
                 <div className="team-content">
-                    <p>{strDescriptionEN}</p>
+                    <p>{first100Paragraphs}</p>
+                    <p>{second100Paragraphs}</p>
+                    <p>{restParagraphs}</p>
                 </div>
                 <div className="social-icon">
                     <Link to={'https://' + strFacebook}>Facebook</Link>
