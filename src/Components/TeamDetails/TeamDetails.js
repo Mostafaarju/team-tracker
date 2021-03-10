@@ -30,7 +30,6 @@ const TeamDetails = () => {
     const first100Paragraphs = description?.slice(0, 100).join(" ")
     const second100Paragraphs = description?.slice(100, 200).join(" ")
     const restParagraphs = description?.slice(200).join(" ")
-    console.log(restParagraphs);
 
 
 
@@ -63,10 +62,10 @@ const TeamDetails = () => {
                     <p>{restParagraphs}</p>
                 </div>
                 <div className="social-icon">
-                    <Link to={'https://' + strFacebook}>Facebook</Link>
-                    <Link to={strTwitter}>Facebook</Link>
-                    <Link to={strWebsite}>Facebook</Link>
-                    <Link to={strYoutube}>Facebook</Link>
+                    <a target='_blank' rel='noreferrer' href={"https://" + strFacebook}>Facebook</a>
+                    <a target='_blank' rel='noreferrer' href={"https://" + strTwitter}>Twitter</a>
+                    <a target='_blank' rel='noreferrer' href={"https://" + strWebsite}>Website</a>
+                    <a target='_blank' rel='noreferrer' href={"https://" + strYoutube}>Youtube</a>
                 </div>
             </Container>
         </div>
