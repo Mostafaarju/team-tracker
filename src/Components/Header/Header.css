@@ -1,0 +1,15 @@
+.main-header {
+    background-image: url(../../images/header-banner.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    min-height: 200px;
+    background-position: center;
+    text-align: center;
+    background-color: rgb(51 51 51 / 56%);
+    background-blend-mode: multiply;
+}
+.main-header h1 {
+    padding: 75px;
+    color: #fff;
+}

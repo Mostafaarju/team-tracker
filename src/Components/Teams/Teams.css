@@ -1,0 +1,15 @@
+.card img {
+    width: 170px;
+    margin: 0 auto;
+    padding-top: 1.25rem;
+}
+.team {
+    padding: 15px 0;
+}
+.team a {
+    padding: 8px 20px;
+    background: #333;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
