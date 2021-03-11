@@ -8,8 +8,6 @@ import Teams from '../Teams/Teams';
 import "./Home.css"
 
 
-
-
 const Home = () => {
 
     const [teams, setTeams] = useState([]);
@@ -19,7 +17,6 @@ const Home = () => {
         axios(api)
             .then(data => setTeams(data.data.teams));
     }, [])
-
 
     return (
         <main className="main-section">
