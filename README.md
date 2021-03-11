@@ -9,5 +9,6 @@
 5. if team details banner image does not exist showing default banner.
 5. Make a responsive using bootstrap.
 6. add icon using fontAwesome.
+7. add loading spinner.
 
 ### Live url: [https://real-soccer.netlify.app](https://real-soccer.netlify.app)

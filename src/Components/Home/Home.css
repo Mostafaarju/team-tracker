@@ -5,3 +5,12 @@ main.main-section {
 .main-container {
     min-height: 500px;
 }
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container .spinner-border {
+    width: 6rem;
+    height: 6rem;
+}
