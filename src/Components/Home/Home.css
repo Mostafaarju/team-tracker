@@ -2,3 +2,6 @@ main.main-section {
     background-image: linear-gradient(to left, #c31432, #240b36)
 }
 
+.main-container {
+    min-height: 500px;
+}

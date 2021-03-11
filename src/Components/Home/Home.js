@@ -7,6 +7,9 @@ import Header from '../Header/Header';
 import Teams from '../Teams/Teams';
 import "./Home.css"
 
+
+
+
 const Home = () => {
 
     const [teams, setTeams] = useState([]);
@@ -21,11 +24,9 @@ const Home = () => {
     return (
         <main className="main-section">
             <Header />
-            <div className="container mt-4">
+            <div className="main-container container mt-4">
                 <Row>
-                    {
-                        teams.map(team => <Teams key={team.idTeam} team={team} />)
-                    }
+                    {teams.map(team => <Teams key={team.idTeam} team={team} />)}
                 </Row>
             </div>
         </main>
