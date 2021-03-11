@@ -1,0 +1,14 @@
+.not-found-container {
+    background-image: linear-gradient(to left, #c31432, #240b36);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+.not-found-content h1 {
+    font-size: 160px;
+    font-weight: 700;
+    font-family: sans-serif;
+}

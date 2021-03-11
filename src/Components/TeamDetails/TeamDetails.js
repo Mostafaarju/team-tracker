@@ -27,10 +27,6 @@ const TeamDetails = () => {
     const femaleBanner = <img src="https://i.ibb.co/TK8fhRC/female.png" alt="female" />;
     const mixedBanner = <img src="https://i.ibb.co/3N5NYS9/mixed.png" alt="mixed" />;
 
-    // https://i.ibb.co/t8HK2VQ/male.jpg
-    // https://i.ibb.co/sFm2Qy3/liga-lede-1-1300x616.jpg
-    // https://i.ibb.co/bRLcsKB/thumbs-b-c-ddb5278adc7518b5b034603f12315768.jpg
-
     // String separate in multiple paragraph
     const description = strDescriptionEN?.split(" ")
     const first100Paragraphs = description?.slice(0, 100).join(" ")
