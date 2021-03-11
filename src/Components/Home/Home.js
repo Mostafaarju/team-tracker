@@ -18,7 +18,6 @@ const Home = () => {
         axios(api)
             .then(data => setTeams(data.data.teams))
             .finally(() => setLoading(true))
-
     }, [])
 
     return (

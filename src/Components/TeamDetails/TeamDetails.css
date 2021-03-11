@@ -46,6 +46,12 @@
     line-height: 28px;
 }
 
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
 /* Media Query for Mobile Device */
 @media screen and (max-width: 575px) {
