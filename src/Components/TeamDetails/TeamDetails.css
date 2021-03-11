@@ -6,12 +6,13 @@
     text-align: right;
     padding: 15px;
 }
-.team-info {
+.team-container .team-info {
     align-items: center;
     background-image: linear-gradient(to right, #240b36, #c31432);
     border-radius: 10px;
     padding: 10px;
     color: white;
+    margin: 0;
 }
 .team-info h1 {
     font-size: 36px;

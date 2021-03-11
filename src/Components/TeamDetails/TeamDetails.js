@@ -4,7 +4,7 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Breadcrumb, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import TeamHeader from '../TeamHeader/TeamHeader';
@@ -46,23 +46,25 @@ const TeamDetails = () => {
             </div>
 
             <Container>
-                <Row className="team-info">
-                    <Col md={7}>
-                        <h1>{strAlternate}</h1>
-                        <div className="team-paragraph-info">
-                            <p><FontAwesomeIcon icon={faMapMarked}></FontAwesomeIcon> Founded: {intFormedYear}</p>
-                            <p><FontAwesomeIcon icon={faFlag}></FontAwesomeIcon> Country: {strCountry}</p>
-                            <p><FontAwesomeIcon icon={faFutbol}></FontAwesomeIcon> Sports Type: {strSport}</p>
-                            {strGender === "Male" && <p><FontAwesomeIcon icon={faMars}></FontAwesomeIcon> Gender: {strGender}</p>}
-                            {strGender === "Female" && <p><FontAwesomeIcon icon={faVenus}></FontAwesomeIcon> Gender: {strGender}</p>}
-                        </div>
-                    </Col>
-                    <Col className="team-image" md={5}>
-                        {strGender === "Male" && maleBanner}
-                        {strGender === "Female" && femaleBanner}
-                        {strGender === "Mixed" && mixedBanner}
-                    </Col>
-                </Row>
+                <div className="team-container">
+                    <Row className="team-info">
+                        <Col md={7}>
+                            <h1>{strAlternate}</h1>
+                            <div className="team-paragraph-info">
+                                <p><FontAwesomeIcon icon={faMapMarked}></FontAwesomeIcon> Founded: {intFormedYear}</p>
+                                <p><FontAwesomeIcon icon={faFlag}></FontAwesomeIcon> Country: {strCountry}</p>
+                                <p><FontAwesomeIcon icon={faFutbol}></FontAwesomeIcon> Sports Type: {strSport}</p>
+                                {strGender === "Male" && <p><FontAwesomeIcon icon={faMars}></FontAwesomeIcon> Gender: {strGender}</p>}
+                                {strGender === "Female" && <p><FontAwesomeIcon icon={faVenus}></FontAwesomeIcon> Gender: {strGender}</p>}
+                            </div>
+                        </Col>
+                        <Col className="team-image" md={5}>
+                            {strGender === "Male" && maleBanner}
+                            {strGender === "Female" && femaleBanner}
+                            {strGender === "Mixed" && mixedBanner}
+                        </Col>
+                    </Row>
+                </div>
                 <div className="team-content">
                     <p>{first100Paragraphs}</p>
                     <p>{second100Paragraphs}</p>
