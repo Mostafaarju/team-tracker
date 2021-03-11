@@ -44,3 +44,19 @@
     margin-top: 30px;
     line-height: 28px;
 }
+
+
+/* Media Query for Mobile Device */
+@media screen and (max-width: 575px) {
+    .team-info h1 {
+      font-size: 25px;
+      font-weight: 600;
+    }
+    .team-paragraph-info p {
+        font-size: 16px;
+        line-height: 1rem;
+    }
+    .team-badge img {
+        width: 150px;
+    }
+  }

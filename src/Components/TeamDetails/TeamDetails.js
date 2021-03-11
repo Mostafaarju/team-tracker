@@ -46,7 +46,7 @@ const TeamDetails = () => {
             </div>
 
             <Container>
-                <Row className="team-info row">
+                <Row className="team-info">
                     <Col md={7}>
                         <h1>{strAlternate}</h1>
                         <div className="team-paragraph-info">

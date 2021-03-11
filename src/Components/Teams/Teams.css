@@ -27,3 +27,11 @@
     background: linear-gradient(to left, #8e0e00, #1f1c18);
     transition: .3s;
 }
+
+
+/* Media Query for Mobile Device */
+@media screen and (max-width: 991px) {
+    .card img {
+        width: 150px;
+    }
+  }

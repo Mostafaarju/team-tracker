@@ -20,3 +20,11 @@
     min-height: 200px;
     justify-content: center;
 }
+
+
+@media only screen and (max-width: 575px) {
+    .main-header h1 {
+        font-size: 42px;
+    }
+    
+}
