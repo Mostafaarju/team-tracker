@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { Row } from 'react-bootstrap';
 import Header from '../Header/Header';
 import Teams from '../Teams/Teams';
+import "./Home.css"
 
 const Home = () => {
 
@@ -18,16 +19,16 @@ const Home = () => {
 
 
     return (
-        <React.Fragment>
+        <main className="main-section">
             <Header />
-            <div className="container">
-                <Row className="mt-5">
+            <div className="container mt-4">
+                <Row>
                     {
                         teams.map(team => <Teams key={team.idTeam} team={team} />)
                     }
                 </Row>
             </div>
-        </React.Fragment>
+        </main>
     );
 };
 

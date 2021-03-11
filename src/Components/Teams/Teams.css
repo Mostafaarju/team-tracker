@@ -6,10 +6,24 @@
 .team {
     padding: 15px;
 }
-.team a {
+.card-info a {
     padding: 8px 20px;
-    background: #333;
+    background: linear-gradient(to right, #8e0e00, #1f1c18);
     color: #fff;
     font-weight: 500;
     text-transform: uppercase;
+    transition: .3s;
+}
+.card-info {
+    background-image: linear-gradient(to right, #abbaab, #ffffff);
+    box-shadow: 0 0 14px 0 #333;
+}
+.card-info a svg {
+    margin-left: 10px;
+}
+.card-info a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(to left, #8e0e00, #1f1c18);
+    transition: .3s;
 }

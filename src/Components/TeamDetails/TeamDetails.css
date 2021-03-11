@@ -1,12 +1,46 @@
 .team-image img {
-    width: 300px;
+    width: 100%;
+    border-radius: 10px;
 }
 .team-image {
     text-align: right;
+    padding: 15px;
 }
 .team-info {
     align-items: center;
-    background: cornflowerblue;
+    background-image: linear-gradient(to right, #240b36, #c31432);
     border-radius: 10px;
     padding: 10px;
+    color: white;
+}
+.team-info h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+.team-info svg {
+    margin-right: 10px;
+}
+.breadcrumb a {
+    font-weight: 600;
+    color: #025955;
+}
+.breadcrumb .active {
+    color: gray;
+    font-weight: 400;
+}
+.breadcrumb .active:hover {
+    text-decoration: none;
+    color: gray;
+}
+.team-paragraph-info {
+    margin-top: 25px;
+}
+.team-paragraph-info p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7rem;
+}
+.team-content {
+    margin-top: 30px;
+    line-height: 28px;
 }

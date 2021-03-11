@@ -4,11 +4,12 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Breadcrumb, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import TeamHeader from '../TeamHeader/TeamHeader';
 import './TeamDetails.css'
+import SocialIcons from '../SocialIcons/SocialIcons';
 
 const TeamDetails = () => {
     const { teamId } = useParams();
@@ -20,40 +21,46 @@ const TeamDetails = () => {
             .then(data => setTeam(data.data.teams[0]));
     }, [teamId])
 
-    const { strTeamFanart4, strDescriptionEN, idTeam, strAlternate, strCountry, intFormedYear, strTeamBadge, strFacebook, strGender, strTwitter, strWebsite, strYoutube, strSport } = team;
+    const { strTeamFanart4, strDescriptionEN, idTeam, strAlternate, strCountry, intFormedYear, strTeamBadge, strFacebook, strGender, strTwitter, strWebsite, strInstagram, strYoutube, strSport } = team;
 
-    const maleBanner = <img src="https://i.ibb.co/4R8p4z5/male.png" alt="male" />;
+    const maleBanner = <img src="https://i.ibb.co/bRLcsKB/thumbs-b-c-ddb5278adc7518b5b034603f12315768.jpg" alt="male" />;
     const femaleBanner = <img src="https://i.ibb.co/TK8fhRC/female.png" alt="female" />;
+    const mixedBanner = <img src="https://i.ibb.co/3N5NYS9/mixed.png" alt="mixed" />;
 
+    // https://i.ibb.co/t8HK2VQ/male.jpg
+    // https://i.ibb.co/sFm2Qy3/liga-lede-1-1300x616.jpg
+    // https://i.ibb.co/bRLcsKB/thumbs-b-c-ddb5278adc7518b5b034603f12315768.jpg
 
+    // String separate in multiple paragraph
     const description = strDescriptionEN?.split(" ")
     const first100Paragraphs = description?.slice(0, 100).join(" ")
     const second100Paragraphs = description?.slice(100, 200).join(" ")
     const restParagraphs = description?.slice(200).join(" ")
 
-
-
     return (
-        <div>
+        <React.Fragment>
+            <TeamHeader banner={strTeamFanart4} logo={strTeamBadge} />
 
-            <div className="team-header">
-                <TeamHeader banner={strTeamFanart4} logo={strTeamBadge} />
-            </div>
             <div className="breadcrumb">
-                <span><Link to="/">Home</Link> {'>'} <Link to={"/league/" + idTeam}>Team</Link></span>
+                <span><Link to="/">Home</Link> {'>'} <Link className="active" to={"/team/" + idTeam}> Team </Link></span>
             </div>
+
             <Container>
                 <Row className="team-info row">
-                    <Col className="team-info" md={6}>
+                    <Col md={7}>
                         <h1>{strAlternate}</h1>
-                        <p><FontAwesomeIcon icon={faMapMarked}></FontAwesomeIcon> Founded: {intFormedYear}</p>
-                        <p><FontAwesomeIcon icon={faFlag}></FontAwesomeIcon> Country: {strCountry}</p>
-                        <p><FontAwesomeIcon icon={faFutbol}></FontAwesomeIcon> Sports Type: {strSport}</p>
-                        {strGender === "Male" && <p><FontAwesomeIcon icon={faMars}></FontAwesomeIcon> Gender: {strGender}</p>}
-                        {strGender === "Female" && <p><FontAwesomeIcon icon={faVenus}></FontAwesomeIcon> Gender: {strGender}</p>}
+                        <div className="team-paragraph-info">
+                            <p><FontAwesomeIcon icon={faMapMarked}></FontAwesomeIcon> Founded: {intFormedYear}</p>
+                            <p><FontAwesomeIcon icon={faFlag}></FontAwesomeIcon> Country: {strCountry}</p>
+                            <p><FontAwesomeIcon icon={faFutbol}></FontAwesomeIcon> Sports Type: {strSport}</p>
+                            {strGender === "Male" && <p><FontAwesomeIcon icon={faMars}></FontAwesomeIcon> Gender: {strGender}</p>}
+                            {strGender === "Female" && <p><FontAwesomeIcon icon={faVenus}></FontAwesomeIcon> Gender: {strGender}</p>}
+                        </div>
                     </Col>
-                    <Col className="team-image" md={6}>
-                        {strGender === "Male" && maleBanner} {strGender === "Female" && femaleBanner}
+                    <Col className="team-image" md={5}>
+                        {strGender === "Male" && maleBanner}
+                        {strGender === "Female" && femaleBanner}
+                        {strGender === "Mixed" && mixedBanner}
                     </Col>
                 </Row>
                 <div className="team-content">
@@ -61,14 +68,9 @@ const TeamDetails = () => {
                     <p>{second100Paragraphs}</p>
                     <p>{restParagraphs}</p>
                 </div>
-                <div className="social-icon">
-                    <a target='_blank' rel='noreferrer' href={"https://" + strFacebook}>Facebook</a>
-                    <a target='_blank' rel='noreferrer' href={"https://" + strTwitter}>Twitter</a>
-                    <a target='_blank' rel='noreferrer' href={"https://" + strWebsite}>Website</a>
-                    <a target='_blank' rel='noreferrer' href={"https://" + strYoutube}>Youtube</a>
-                </div>
             </Container>
-        </div>
+            <SocialIcons key={idTeam} instagram={strInstagram} youtube={strYoutube} facebook={strFacebook} web={strWebsite} twitter={strTwitter} />
+        </React.Fragment>
     );
 };
 

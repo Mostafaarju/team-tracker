@@ -13,12 +13,12 @@ const Teams = ({ team }) => {
 
         <React.Fragment>
             <Col className="team" sm={4}>
-                <Card className="text-center h-100">
+                <Card className="card-info text-center h-100">
                     <Card.Img variant="top" src={strTeamBadge} />
                     <Card.Body>
                         <Card.Title>{strTeam}</Card.Title>
                         <Card.Text>Sports Type: {strSport}</Card.Text>
-                        <Link to={"/league/" + idTeam}>Explore <FontAwesomeIcon icon={faArrowRight} /></Link>
+                        <Link to={"/team/" + idTeam}>Explore <FontAwesomeIcon icon={faArrowRight} /></Link>
                     </Card.Body>
                 </Card>
             </Col>

@@ -1,10 +1,9 @@
 .team-header {
     background-repeat: no-repeat;
-    object-fit: cover;
     background-size: cover;
     background-position: center;
     text-align: center;
-    background-color: rgb(39 36 36 / 90%);
+    background-color: rgb(39 36 36 / 60%);
     background-blend-mode: multiply;
     
 }
@@ -14,9 +13,9 @@
 .team-badge {
     display: flex;
     align-items: center;
-    min-height: 200px;
+    min-height: 260px;
     justify-content: center;
 }
 .team-badge img {
-    width: 150px;
+    width: 180px;
 }
