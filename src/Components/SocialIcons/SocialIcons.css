@@ -1,48 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
 .social-icon {
-    text-align: center;
-    margin: 40px 0;
+  text-align: center;
+  margin: 40px 0;
 }
 .social-icon a {
-    color: #333;
-    padding: 15px;
-    font-size: 35px;
+  color: #333;
+  padding: 15px;
+  font-size: 35px;
 }
 .social-icon a .fa-facebook {
-    color: #3b5998;
+  color: #3b5998;
 }
 .social-icon a .fa-twitter {
-    color: #00acee;
+  color: #00acee;
 }
 .social-icon a .fa-youtube {
-    color: #c4302b;
+  color: #c4302b;
 }
 .social-icon a .fa-instagram {
-    color: #3f729b;
+  color: #3f729b;
 }
 .social-icon a .fa-globe {
-    color: #009195;
+  color: #009195;
 }
 
 .social-icon a:hover .fa-facebook {
-    color: gray;
+  color: gray;
 }
 .social-icon a:hover .fa-twitter {
-    color: gray;
+  color: gray;
 }
 .social-icon a:hover .fa-youtube {
-    color: gray;
+  color: gray;
 }
 .social-icon a:hover .fa-instagram {
-    color: gray;
+  color: gray;
 }
 .social-icon a:hover .fa-globe {
-    color: gray;
+  color: gray;
 }
 
-
 @media only screen and (max-width: 575px) {
-    .social-icon a {
-        padding: 10px;
-        font-size: 30px;
-    }
+  .social-icon a {
+    padding: 10px;
+    font-size: 30px;
+  }
 }

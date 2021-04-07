@@ -1,69 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+.bg {
+  background-color: #0e0a2b;
+}
 .team-image img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 .team-image {
-    text-align: right;
-    padding: 15px;
+  text-align: right;
+  padding: 15px;
 }
 .team-container .team-info {
-    align-items: center;
-    background-image: linear-gradient(to right, #240b36, #c31432);
-    border-radius: 10px;
-    padding: 10px;
-    color: white;
-    margin: 0;
+  align-items: center;
+  background-color: #3a42ff;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  margin: 0;
 }
 .team-info h1 {
-    font-size: 36px;
-    font-weight: bold;
+  font-size: 36px;
+  font-weight: bold;
 }
 .team-info svg {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .breadcrumb a {
-    font-weight: 600;
-    color: #025955;
+  font-weight: 600;
+  color: #025955;
 }
 .breadcrumb .active {
-    color: gray;
-    font-weight: 400;
+  color: gray;
+  font-weight: 400;
 }
 .breadcrumb .active:hover {
-    text-decoration: none;
-    color: gray;
+  text-decoration: none;
+  color: gray;
 }
 .team-paragraph-info {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 .team-paragraph-info p {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.7rem;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.7rem;
 }
 .team-content {
-    margin-top: 30px;
-    line-height: 28px;
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #c6c6c6;
 }
 
 .loading-spinner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* Media Query for Mobile Device */
 @media screen and (max-width: 575px) {
-    .team-info h1 {
-      font-size: 25px;
-      font-weight: 600;
-    }
-    .team-paragraph-info p {
-        font-size: 16px;
-        line-height: 1rem;
-    }
-    .team-badge img {
-        width: 150px;
-    }
+  .team-info h1 {
+    font-size: 25px;
+    font-weight: 600;
   }
+  .team-paragraph-info p {
+    font-size: 16px;
+    line-height: 1rem;
+  }
+  .team-badge img {
+    width: 150px;
+  }
+}

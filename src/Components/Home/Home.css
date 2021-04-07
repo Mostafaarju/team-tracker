@@ -1,16 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
 main.main-section {
-    background-image: linear-gradient(to left, #c31432, #240b36)
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .main-container {
-    min-height: 500px;
+  min-height: 500px;
 }
 .loading-spinner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main-container .spinner-border {
-    width: 6rem;
-    height: 6rem;
+  width: 6rem;
+  height: 6rem;
 }
